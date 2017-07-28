@@ -1,0 +1,15 @@
+---
+title: "Plotly Demonstration"
+author: "Stephen"
+date: "July 20, 2017"
+output: ioslides_presentation
+---
+
+
+## Plotly Interactive Graphic
+###Mtcars data set
+```{r, warning=FALSE,echo=FALSE}
+options(warn=-1)
+suppressMessages(library(plotly))
+suppressMessages(plot_ly(mtcars, x = ~wt, y = ~mpg, type="scatter",mode = "markers",color=~carb,size=~gear))
+```
